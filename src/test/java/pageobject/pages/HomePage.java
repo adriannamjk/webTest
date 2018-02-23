@@ -6,32 +6,31 @@ import org.openqa.selenium.support.FindBy;
 public class HomePage{
 
     @FindBy(className = "dropdown-toggle go-text-right")
-    private WebElement myAccountLinkElement;
+    private WebElement myAccountLink;
 
     @FindBy(className = "go-text-right")
-    private WebElement loginLinkElement;
+    private WebElement loginLink;
 
     @FindBy(xpath = "//span[contains(text(),'Hotels')]")
     private WebElement hotelsLink;
 
     @FindBy(xpath = "//span[contains(text(),'Flights')]")
-    private WebElement flightsLinkElement;
+    private WebElement flightsLink;
 
 
     public void clickOnMyAccount() {
-        myAccountLinkElement.click();
+        myAccountLink.click();
+    }
+
+    public void clickOnLoginLink() {
+        loginLink.click();
     }
 
     public void clickOnHotelsLink() {
-        hotelsLinkElement.click();
+        hotelsLink.click();
     }
 
     public void clickOnFlightsLink() {
-        flightsLinkElement.click();
+        flightsLink.click();
     }
-
-// nie wiem jak rozwiązać problem logowania, jeżeli jest tam lista rozwijana
-// jak nazwac test sprawdzający wszystkie elementy menu? przycisk button w hotelach?
-// jak przetestować wyszukiwanie lotów?
-
 }
