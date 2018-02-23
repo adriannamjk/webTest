@@ -4,18 +4,29 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class LoginPage{
-    //https://www.phptravels.net/flightst
-    //user@phptravels.com
-    //demouser
-    // findBy - email- wprowadzic , password- wprowadzic , przycisk login
 
-    @FindBy(id = "email")
-    private WebElement emailTextbox;
+    private static final String USER_NAME = "DVhbCERv";
 
-    public void insertEmailTextbox(String email){
-        emailTextbox.sendKeys(email);
-        emailTextbox.
+
+    @FindBy(xpath = "//div[@class='form-group']//input[@type='email']")
+    private WebElement emailField;
+
+    @FindBy(xpath = "//input[@type='password']")
+    private WebElement passwordField;
+
+    @FindBy(xpath = "//button[@type='submit'][contains(text(),'Login')]")
+    private WebElement loginButton;
+
+
+    public void entryEmail(String email){
+        emailField.sendKeys(email);
     }
 
+    public void entryPassword(String password) {
+        passwordField.sendKeys(password);
+    }
 
+    public void clickOnLogin() {
+        loginButton.click();
+    }
 }
