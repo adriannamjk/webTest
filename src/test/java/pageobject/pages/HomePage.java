@@ -12,7 +12,7 @@ public class HomePage{
     private WebElement loginLinkElement;
 
     @FindBy(xpath = "//span[contains(text(),'Hotels')]")
-    private WebElement hotelsLinkElement;
+    private WebElement hotelsLink;
 
     @FindBy(xpath = "//span[contains(text(),'Flights')]")
     private WebElement flightsLinkElement;
