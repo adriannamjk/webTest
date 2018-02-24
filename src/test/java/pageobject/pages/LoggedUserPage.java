@@ -6,10 +6,10 @@ import org.openqa.selenium.support.FindBy;
 
 public class LoggedUserPage{
 
-    @FindBy(xpath = "//div[@class='go-left']")
-    private WebElement myProfileButton;
+    @FindBy(xpath = "//div[@class='header-links']//ul//li//a[@href='/customer/info']")
+    private WebElement myAccountTab;
 
     public boolean isUserLogged() {
-       return myProfileButton.isDisplayed();
+       return myAccountTab.isDisplayed();
     }
 }

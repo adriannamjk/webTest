@@ -5,28 +5,24 @@ import org.openqa.selenium.support.FindBy;
 
 public class LoginPage{
 
-    private static final String USER_NAME = "DVhbCERv";
 
 
-    @FindBy(xpath = "//div[@class='form-group']//input[@type='email']")
+    @FindBy(xpath = "//input[@id='Email']")
     private WebElement emailField;
 
-    @FindBy(xpath = "//input[@type='password']")
+    @FindBy(xpath = "//input[@id='Password']")
     private WebElement passwordField;
 
-    @FindBy(xpath = "//button[@type='submit'][contains(text(),'Login')]")
-    private WebElement loginButton;
+    @FindBy(xpath = "//input[@class='button-1 login-button']")
+    private WebElement logInButton;
 
 
-    public void entryEmail(String email){
+    public void enterCredentials(String email, String password) {
         emailField.sendKeys(email);
-    }
-
-    public void entryPassword(String password) {
         passwordField.sendKeys(password);
     }
 
-    public void clickOnLogin() {
-        loginButton.click();
+    public void clickOnLogInButton() {
+        logInButton.click();
     }
 }
