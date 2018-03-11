@@ -102,7 +102,7 @@ public class ApplicationTest {
     @Test
     public void tabTest() {
 
-        List<WebElement> listOfMenuElements = driver.findElements(By.xpath("//div[@class='header-menu']"));
+        List<WebElement> listOfMenuElements = driver.findElements(By.className("primary-nav col-lg-7 navbar navbar-default"));
         List<String> listOfTexts = new ArrayList<>();
 
         boolean doesContain = false;
@@ -111,16 +111,11 @@ public class ApplicationTest {
             listOfTexts.add(e.getText());
         }
 
-        List<String> elements = Arrays.asList("Computers", "Electronics", "Apparel", "Digital downloads", "Books","Jewelry","Gift Cards");
+        List<String> elements = Arrays.asList("HOME", "WEB TEST", "O PROJEKCIE", "KONTAKT");
         doesContain = listOfTexts.containsAll(elements);
 
         assertTrue("Element doesn't exist", doesContain);
 
-        /*
-        SoftAssertions softly = new SoftAssertions();
-        SoftAssertions.assertSoftly(softlyAnotherWay -> {
-            softly.assertThat(assertThat(homePage.clickOnComputersTab().);
-       */
     }
 
 
